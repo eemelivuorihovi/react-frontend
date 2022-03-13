@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Time from "./components/Time";
+import {Col, Row} from "react-bootstrap";
+import Metrics from "./components/Metrics";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Row>
+            <Col xl={6} lg={6} md={6} sm={6} xs={6}>
+                <Time />
+            </Col>
+            <Col xl={6} lg={6} md={6} sm={6} xs={6}>
+                <Metrics />
+            </Col>
+        </Row>
     </div>
   );
-}
+};
 
 export default App;
